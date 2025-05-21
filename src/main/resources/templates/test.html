@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Contact Page</title>
+
+  <!-- Project Icon -->
+  <link rel="icon" href="assets/generalMedia/iconProject.png" type="image/x-icon" />
+
+  <!-- Bootstrap Framework -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet"/>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet"/>
+
+  <!-- MDB -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.3.0/mdb.min.css" rel="stylesheet"/>
+
+  <!-- CSS File -->
+  <link rel="stylesheet" href="test.css">
+
+
+</head>
+
+<body>
+
+<!-- Navbar -->
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg fixed-top navbar-scroll">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/">
+      <img src="assets/generalMedia/logo.png" alt="Logo" id="navbar-logo">Rezervare Mese
+    </a>
+
+    <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <i class="fas fa-bars"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/Home">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/Test">Rezervări Mese</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/Contact">Contact</a>
+        </li>
+      </ul>
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="/Logout">Logout</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<!-- End of Navbar -->
+
+<!--Section: Content-->
+<section id="news_intro" class="text-center white-text grey p-5">
+  <!--Grid row-->
+  <div class="row d-flex justify-content-center">
+    <!--Grid column-->
+    <div class="col-md-12">
+      <h3 id="text_intro1" class="text-white display-1">Rezervări</h3>
+      <p id="text_intro2" class="text-white display-6">Rezervă o Masă
+      </p>
+    </div>
+    <!--Grid column-->
+  </div>
+  <!--Grid row-->
+</section>
+
+<!--Intro Section -->
+<section class="page-section clearfix">
+  <div class="container">
+    <div class="overlap">
+      <img class="overlap-img img-fluid mb-3 mb-lg-0 rounded" src="assets/testMedia/chef.png" id="pozachenar" />
+      <div class="overlap-text left-0 text-center bg-faded p-5 rounded" id="chenar">
+        <h2 class="section-heading mb-4">
+          <span class="section-heading-lower"><strong>Reguli</strong> pentru rezervări:</span>
+        </h2>
+        <div>
+          <ul class="list-group">
+            <li class="list-group-item">Apăsați pe masa dorită pentru a verifica rezervările existente</li>
+            <li class="list-group-item">Realizați o rezervare prin intermediul formularului</li>
+            <li class="list-group-item">Nu se pot suprapune două rezervări pentru aceeași masă</li>
+            <li class="list-group-item">Nu efectuați o rezervare dacă știți că nu puteți ajunge la timp</li>
+            <li class="list-group-item">Pentru a anula o rezervare folosiți formularul de contact</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Image Section -->
+<div class="container mt-5 pt-5 d-flex justify-content-center img-fluid">
+  <div class="responsive-container">
+    <img src="assets/testMedia/mese_resized.jpeg" alt="Centered Image" usemap="#image-map" class="responsive-image">
+    <map name="image-map">
+      <area target="" alt="1" title="1" href="#" coords="139,127,34" shape="circle" data-original-coords="139,127,34" data-bs-toggle="modal" data-bs-target="#modal1"></area>
+      <area target="" alt="3" title="3" href="#" coords="138,213,35" shape="circle" data-original-coords="138,213,35" data-bs-toggle="modal" data-bs-target="#modal2"></area>
+      <area target="" alt="2" title="2" href="#" coords="341,127,35" shape="circle" data-original-coords="341,127,35" data-bs-toggle="modal" data-bs-target="#modal3"></area>
+      <area target="" alt="4" title="4" href="#" coords="341,213,35" shape="circle" data-original-coords="341,213,35" data-bs-toggle="modal" data-bs-target="#modal4"></area>
+      <area target="" alt="5" title="5" href="#" coords="240,295,34" shape="circle" data-original-coords="240,295,34" data-bs-toggle="modal" data-bs-target="#modal5"></area>
+    </map>
+  </div>
+</div>
+
+
+<!--Area 1 Section-->
+<div class="modal fade" id="modal1" tabindex="-1" aria-labelledby="modal1Label" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modal1Label">Rezervări Masa 1</h5>
+      </div>
+      <div class="modal-body">
+        <table class="table">
+          <thead>
+          <tr>
+            <th scope="col">IDMasa</th>
+            <th scope="col">Ora de Inceput</th>
+            <th scope="col">Ora de Final</th>
+          </tr>
+          </thead>
+        </table>
+        <div class="table-responsive">
+          <table class="table" id="reservationTable1">
+            <tr th:each="rezervare : ${rezervari}" th:if="${rezervare.getIdsala()} == 5">
+              <td th:text="${rezervare.getIdsala()}"></td>
+              <td th:text="${rezervare.getStarthour()}"></td>
+              <td th:text="${rezervare.getEndhour()}"></td>
+            </tr>
+          </table>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--Area 2 Section-->
+<div class="modal fade" id="modal2" tabindex="-1" aria-labelledby="modal1Label" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modal2Label">Rezervări Masa 3</h5>
+      </div>
+      <div class="modal-body">
+        <table class="table">
+          <thead>
+          <tr>
+            <th scope="col">IDMasa</th>
+            <th scope="col">Ora de Inceput</th>
+            <th scope="col">Ora de Final</th>
+          </tr>
+          </thead>
+        </table>
+        <div class="table-responsive">
+          <table class="table" id="reservationTable2">
+            <tr th:each="rezervare : ${rezervari}" th:if="${rezervare.getIdsala()} == 4">
+              <td th:text="${rezervare.getIdsala()}"></td>
+              <td th:text="${rezervare.getStarthour()}"></td>
+              <td th:text="${rezervare.getEndhour()}"></td>
+            </tr>
+          </table>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--Area 3 Section-->
+<div class="modal fade" id="modal3" tabindex="-1" aria-labelledby="modal1Label" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modal3Label">Rezervări Masa 2</h5>
+      </div>
+      <div class="modal-body">
+        <table class="table">
+          <thead>
+          <tr>
+            <th scope="col">IDMasa</th>
+            <th scope="col">Ora de Inceput</th>
+            <th scope="col">Ora de Final</th>
+          </tr>
+          </thead>
+        </table>
+        <div class="table-responsive">
+          <table class="table" id="reservationTable3">
+            <tr th:each="rezervare : ${rezervari}" th:if="${rezervare.getIdsala()} == 3">
+              <td th:text="${rezervare.getIdsala()}"></td>
+              <td th:text="${rezervare.getStarthour()}"></td>
+              <td th:text="${rezervare.getEndhour()}"></td>
+            </tr>
+          </table>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--Area 4 Section-->
+<div class="modal fade" id="modal4" tabindex="-1" aria-labelledby="modal1Label" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modal4Label">Rezervări Masa 4</h5>
+      </div>
+      <div class="modal-body">
+        <table class="table">
+          <thead>
+          <tr>
+            <th scope="col">IDMasa</th>
+            <th scope="col">Ora de Inceput</th>
+            <th scope="col">Ora de Final</th>
+          </tr>
+          </thead>
+        </table>
+        <div class="table-responsive">
+          <table class="table" id="reservationTable4">
+            <tr th:each="rezervare : ${rezervari}" th:if="${rezervare.getIdsala()} == 2">
+              <td th:text="${rezervare.getIdsala()}"></td>
+              <td th:text="${rezervare.getStarthour()}"></td>
+              <td th:text="${rezervare.getEndhour()}"></td>
+            </tr>
+          </table>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--Area 5 Section-->
+<div class="modal fade" id="modal5" tabindex="-1" aria-labelledby="modal1Label" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modal5Label">Rezervări Masa 5</h5>
+      </div>
+      <div class="modal-body">
+        <table class="table">
+          <thead>
+          <tr>
+            <th scope="col">IDMasa</th>
+            <th scope="col">Ora de Inceput</th>
+            <th scope="col">Ora de Final</th>
+          </tr>
+          </thead>
+        </table>
+        <div class="table-responsive">
+          <table class="table" id="reservationTable5">
+            <tr th:each="rezervare : ${rezervari}" th:if="${rezervare.getIdsala()} == 1">
+              <td th:text="${rezervare.getIdsala()}"></td>
+              <td th:text="${rezervare.getStarthour()}"></td>
+              <td th:text="${rezervare.getEndhour()}"></td>
+            </tr>
+          </table>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Form Section -->
+<div class="container form-container mt-5 pt-5">
+  <h2>Rezervare Masă</h2>
+  <form action="/makeRezervation" method="post" id="myform">
+    <div class="form-group">
+      <label for="sala">Select Table</label>
+      <select class="form-control" id="sala" name="Sala">
+        <option th:each="sala:${sali}" th:value="${sala.getIdsala()}" th:text="${sala.getNume()}"></option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label>Starting Hour</label>
+      <input type="datetime-local" class="form-control" id="StartingHour" name="StartingHour">
+    </div>
+    <div class="form-group">
+      <label>Ending Hour</label>
+      <input type="datetime-local" class="form-control" id="EndingHour" name="EndingHour">
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
+
+<!-- Footer -->
+<footer id="footer-background" class="text-center text-lg-start text-white">
+  <!-- Section: Social media -->
+  <section id="footer-social" class="d-flex justify-content-between p-4">
+    <div class="container d-flex justify-content-center">
+      <a href="https://www.facebook.com/etti.upb" id="social-button-facebook" type="button" class="btn btn-primary btn-lg btn-floating mx-2">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      <a href="https://www.youtube.com/@lsebucuresti" id="social-button-youtube" type="button" class="btn btn-primary btn-lg btn-floating mx-2">
+        <i class="fab fa-youtube"></i>
+      </a>
+      <a href="https://www.instagram.com/ligastudentilorelectronistilse/" id="social-button-instagram" type="button" class="btn btn-primary btn-lg btn-floating mx-2">
+        <i class="fab fa-instagram"></i>
+      </a>
+    </div>
+  </section>
+  <!-- Section: Social media -->
+  <!-- Harta -->
+  <div class="row-12">
+    <div class="col-12" id="map">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2848.9677707090927!2d26.052624791230027!3d44.43382332702441!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40b201db0e7fc333%3A0xe151c4506f229f7b!2sFacultatea%20de%20Electronic%C4%83%2C%20Telecomunica%C8%9Bii%20%C8%99i%20Tehnologia%20Informa%C8%9Biei!5e0!3m2!1sro!2sro!4v1717870799367!5m2!1sro!2sro" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </div>
+  <!-- Harta -->
+
+  <!-- Section: Links  -->
+  <section class="">
+    <div class="container text-center text-md-start mt-5">
+      <!-- Grid row -->
+      <div class="row mt-3">
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+          <!-- Content -->
+          <h6 class="text-uppercase fw-bold">Aplicație de Rezevare a Meselor</h6>
+          <hr id="footer-line-under-title-1" class="mb-4 mt-0 d-inline-block mx-auto" />
+          <p>
+            Rezervați rapid si eficient mese la restaurantul favorit!
+          </p>
+        </div>
+        <!-- Grid column -->
+        <!-- Grid column -->
+        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold">Despre ETTI</h6>
+          <hr id="footer-line-under-title-2" class="mb-4 mt-0 d-inline-block mx-auto" />
+          <p>
+            <a href="https://etti.upb.ro/despre-noi/departamente/" class="text-white">Departamente</a>
+          </p>
+          <p>
+            <a href="https://etti.upb.ro/despre-noi/conducere/" class="text-white">Conducere</a>
+          </p>
+          <p>
+            <a href="https://etti.upb.ro/despre-noi/colaborari/parteneri/" class="text-white">Colaborări</a>
+          </p>
+        </div>
+        <!-- Grid column -->
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold">Ofertă Educațională</h6>
+          <hr id="footer-line-under-title-3" class="mb-4 mt-0 d-inline-block mx-auto" />
+          <p>
+            <a href="https://etti.upb.ro/oferta-educationala/studii-de-licenta/" class="text-white">Licență</a>
+          </p>
+          <p>
+            <a href="https://etti.upb.ro/oferta-educationala/studii-de-masterat/" class="text-white">Master</a>
+          </p>
+          <p>
+            <a href="https://etti.upb.ro/oferta-educationala/scoala-doctorala/" class="text-white">Doctorat</a>
+          </p>
+        </div>
+        <!-- Grid column -->
+        <!-- Grid column -->
+        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold">Contact</h6>
+          <hr id="footer-line-under-title-4" class="mb-4 mt-0 d-inline-block mx-auto" />
+          <p><i class="fas fa-home mr-4"></i> București, România</p>
+          <p><a href="/Contact" class="text-white">Formular Contact</a></p>
+        </div>
+        <!-- Grid column -->
+      </div>
+      <!-- Grid row -->
+    </div>
+  </section>
+  <!-- Section: Links  -->
+
+  <!-- Copyright -->
+  <div id="copyright" class="text-center p-3">
+    © 2025 Copyright:
+    <a class="text-white">Radu Alexandru Theodor & Stan Alexandra</a>
+  </div>
+  <!-- Copyright -->
+</footer>
+<!-- End of Footer -->
+<!-- Buton -->
+<a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="fas fa-angle-double-up"></i></a>
+<!-- Final-->
+
+<!-- Scripturi Bootstrap -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Scripturi MDB -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.3.0/mdb.umd.min.js"></script>
+
+<!-- JS File -->
+<script src="script.js"></script>
+
+<script>
+  /*Buton UP */
+  (function () {
+    "use strict";
+
+    /**
+     * Easy selector helper function
+     */
+    const select = (el, all = false) => {
+      el = el.trim();
+      if (all) {
+        return [...document.querySelectorAll(el)];
+      } else {
+        return document.querySelector(el);
+      }
+    };
+
+    /**
+     * Easy event listener function
+     */
+    const on = (type, el, listener, all = false) => {
+      let selectEl = select(el, all);
+      if (selectEl) {
+        if (all) {
+          selectEl.forEach((e) => e.addEventListener(type, listener));
+        } else {
+          selectEl.addEventListener(type, listener);
+        }
+      }
+    };
+
+    /**
+     * Easy on scroll event listener
+     */
+    const onscroll = (el, listener) => {
+      el.addEventListener("scroll", listener);
+    };
+
+    /**
+     * Back to top button
+     */
+    let backtotop = select(".back-to-top");
+    if (backtotop) {
+      const toggleBacktotop = () => {
+        if (window.scrollY > 100) {
+          backtotop.classList.add("active");
+        } else {
+          backtotop.classList.remove("active");
+        }
+      };
+      window.addEventListener("load", toggleBacktotop);
+      onscroll(document, toggleBacktotop);
+    }
+  })();
+</script>
+
+<!-- Script Rezervare -->
+<script>
+  document.getElementById('myform').addEventListener('submit', function(event) {
+    event.preventDefault();
+    var myform = document.getElementById('myform');
+    var start = document.getElementById('StartingHour').value;
+    var end = document.getElementById('EndingHour').value;
+    var sala = $('#sala').val();
+
+    $.ajax({
+      url:'/checkDates',
+      type:'POST',
+
+      data: ({
+        starthour: start,
+        endhour: end,
+        idsala: sala
+      }),
+      success: function(response) {
+        if(response === "No") {
+          myform.submit();
+        } else {
+          alert("Sala este deja rezervata in acest interval orar!");
+        }
+      },
+      error: function(xhr, status, error) {
+        console.error('Ajax request failed:', error);
+        alert(error);
+      }
+    });
+  });
+</script>
+
+
+<script>
+  function resizeImageMap() {
+    const image = document.querySelector('.responsive-image');
+    const originalWidth = image.naturalWidth;
+    const originalHeight = image.naturalHeight;
+    const widthScale = image.width / originalWidth;
+    const heightScale = image.height / originalHeight;
+
+    const areas = document.querySelectorAll('area');
+    areas.forEach(area => {
+      const originalCoords = area.getAttribute('data-original-coords').split(',').map(Number);
+      const newCoords = originalCoords.map((coord, index) => {
+        return (index % 2 === 0) ? Math.round(coord * widthScale) : Math.round(coord * heightScale);
+      });
+      area.setAttribute('coords', newCoords.join(','));
+    });
+  }
+
+  window.addEventListener('resize', resizeImageMap);
+  window.addEventListener('load', resizeImageMap);
+
+</script>
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    function sortTable(tableId) {
+      var table = document.getElementById(tableId).getElementsByTagName('tbody')[0];
+      var rows = Array.from(table.rows);
+
+      rows.sort(function(a, b) {
+        var keyA = a.cells[1].innerText;
+        var keyB = b.cells[1].innerText;
+
+        if (keyA < keyB) return -1;
+        if (keyA > keyB) return 1;
+        return 0;
+      });
+
+      rows.forEach(function(row) {
+        table.appendChild(row);
+      });
+    }
+
+    sortTable('reservationTable1');
+    sortTable('reservationTable2');
+    sortTable('reservationTable3');
+    sortTable('reservationTable4');
+    sortTable('reservationTable5');
+  });
+</script>
+
+
+</body>
+</html>

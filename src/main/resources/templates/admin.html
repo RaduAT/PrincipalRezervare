@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Contact Page</title>
+
+    <!-- Project Icon -->
+    <link rel="icon" href="assets/generalMedia/iconProject.png" type="image/x-icon" />
+
+    <!-- Bootstrap Framework -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- CSS Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet"/>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet"/>
+
+    <!-- MDB -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.3.0/mdb.min.css" rel="stylesheet"/>
+
+    <!-- CSS File -->
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body onload="updown()">
+
+<nav class="navbar navbar-expand-lg fixed-top navbar-scroll">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="/">
+            <img src="assets/generalMedia/logo.png" alt="Logo" id="navbar-logo">Rezervare Mese
+        </a>
+
+        <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="/Home">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/Test">Rezervări Mese</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/Contact">Contact</a>
+                </li>
+            </ul>
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/Logout">Logout</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="container-fluid">
+    <div class="row">
+        <nav class="col-md-2 d-none d-md-block bg-light sidebar">
+            <div class="sidebar-sticky">
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">
+                            <!--Dashboard-->
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <!--Users-->
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <!--Products-->
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <!--Orders-->
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <!--Settings-->
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <main class="col-md-9 ml-sm-auto col-lg-10 px-4 content" role="main">
+            <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+                <h1 class="h2">Dashboard</h1>
+            </div>
+            <div class="row justify-content-center mb-3">
+                <div class="col-md-6 d-flex justify-content-center">
+                    <div class="card">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Mese</h5>
+                            <button class="btn btn-primary" data-target="#viewSaliModal" data-toggle="modal" type="button">
+                                Vizualizare Mese
+                            </button>
+                            <button class="btn btn-primary" data-target="#addSaliModal" data-toggle="modal" type="button">
+                                Adauga Mese
+                            </button>
+                            <button class="btn btn-primary" data-target="#deleteSaliModal" data-toggle="modal" type="button">
+                                Sterge Mese
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center mb-3">
+                <div class="col-md-6 d-flex justify-content-center">
+                    <div class="card">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Utilizatori</h5>
+                            <button class="btn btn-primary" data-target="#viewStudentiModal" data-toggle="modal" type="button">
+                                Vizualizare Utilizatori
+                            </button>
+                            <button class="btn btn-primary" data-target="#addStudentiModal" data-toggle="modal" type="button">
+                                Adauga Utilizatori
+                            </button>
+                            <button class="btn btn-primary" data-target="#deleteStudentiModal" data-toggle="modal" type="button">
+                                Sterge Utilizatori
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+<!--            <div class="row justify-content-center mb-3">-->
+<!--                <div class="col-md-6 d-flex justify-content-center">-->
+<!--                    <div class="card">-->
+<!--                        <div class="card-body text-center">-->
+<!--                            <h5 class="card-title">Profesori</h5>-->
+<!--                            <button class="btn btn-primary" data-target="#viewProfesoriModal" data-toggle="modal" type="button">-->
+<!--                                Vizualizare Profesori-->
+<!--                            </button>-->
+<!--                            <button class="btn btn-primary" data-target="#addProfesoriModal" data-toggle="modal" type="button">-->
+<!--                                Adauga Profesori-->
+<!--                            </button>-->
+<!--                            <button class="btn btn-primary" data-target="#deleteProfesoriModal" data-toggle="modal" type="button">-->
+<!--                                Sterge Profesori-->
+<!--                            </button>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+            <div class="row justify-content-center mb-3">
+                <div class="col-md-6 d-flex justify-content-center">
+                    <div class="card">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Rezervari</h5>
+                            <button class="btn btn-primary" data-target="#viewRezervariModal" data-toggle="modal" type="button">
+                                Vizualizare Rezervari
+                            </button>
+                            <button class="btn btn-primary" data-target="#deleteRezervariModal" data-toggle="modal" type="button">
+                                Sterge Rezervari
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-md-6 d-flex justify-content-center mb-3">
+                    <div class="card">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Status Pagina</h5>
+                            <button onclick="changeMentenanta()" class="btn btn-primary" type="submit" id="flexSwitchCheckDefault">Update</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</div>
+
+<!-- View Sali Modal -->
+<div aria-hidden="true" aria-labelledby="viewSaliModalLabel" class="modal fade" id="viewSaliModal" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="viewSaliModalLabel">Vizualizare Sali</h5>
+            </div>
+            <div class="table-responsive">
+                <table class="table">
+                        <tr>
+                            <th scope="col">Nume</th>
+                        </tr>
+                        <tr th:each="sala : ${sali}">
+                            <td th:text="${sala.getNume()}"></td>
+                        </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Add Sali Modal -->
+<div aria-hidden="true" aria-labelledby="addSaliModalLabel" class="modal fade" id="addSaliModal" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="addSaliModalLabel">Adauga Sali</h5>
+                <button aria-label="Close" class="close" data-dismiss="modal" type="button">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <!-- Add Sali Form -->
+                <form action="/addSalaModal" id="formularAdaugareSala" method="post">
+                    <div class="form-group">
+                        Nume Masa <input class="form-control" id="numesala" name="NumeMasa" type="text">
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-secondary" data-dismiss="modal" type="button">Close</button>
+                        <input class="btn btn-primary" type="submit" value="Save">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Delete Sali Modal-->
+<div aria-hidden="true" aria-labelledby="deleteSaliModalLabel" class="modal fade" id="deleteSaliModal" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="deleteSaliModalLabel">Sterge Sali</h5>
+            </div>
+            <div class="table-responsive">
+                <form action="/deleteSalaModal" method="post">
+                    <table class="table">
+                        <tr>
+                            <th scope="col">ID</th>
+                            <th scope="col">Nume</th>
+                        </tr>
+                        <tr th:each="sala : ${sali}">
+                            <td><input name="checkDeleteSali" th:value="${sala.getIdsala()}" type="checkbox"></td>
+                            <td th:text="${sala.getNume()}"></td>
+                        </tr>
+                    </table>
+                    <button class="btn btn-danger" type="submit">Delete</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- View Studenti Modal -->
+<div aria-hidden="true" aria-labelledby="viewStudentiModalLabel" class="modal fade" id="viewStudentiModal" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="viewStudentiModalLabel">Vizualizare Utilizatori</h5>
+            </div>
+            <div class="table-responsive">
+                <table class="table">
+                    <tr>
+                        <th scope="col">Nume</th>
+                        <th scope="col">Prenume</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Telefon</th>
+                    </tr>
+                    <tr th:each="student : ${studenti}">
+                        <td th:text="${student.getNume()}"></td>
+                        <td th:text="${student.getPrenume()}"></td>
+                        <td th:text="${student.getMail()}"></td>
+                        <td th:text="${student.getTelefon()}"></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Add Studenti Modal -->
+<div aria-hidden="true" aria-labelledby="addStudentiModalLabel" class="modal fade" id="addStudentiModal" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="addStudentiModalLabel">Adauga Utilizatori</h5>
+                <button aria-label="Close" class="close" data-dismiss="modal" type="button">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <!-- Add Student Form -->
+                <form action="/addStudentModal" id="formularAdaugareStudent" method="post">
+                    <div class="form-group">
+                        Nume Utilizator<input class="form-control" id="numestudent" name="NumeStudent" type="text">
+                    </div>
+                    <div class="form-group">
+                        Prenume Utilizator <input class="form-control" id="prenumestudent" name="PrenumeStudent" type="text">
+                    </div>
+                    <div class="form-group">
+                        Adresa Mail Utilizator <input class="form-control" id="mailstudent" name="MailStudent" type="email">
+                    </div>
+                    <div class="form-group">
+                        Telefon <input class="form-control" id="telefonstudent" name="TelefonStudent" type="number">
+                    </div>
+                    <div class="form-group">
+                        Parola <input class="form-control" id="parolastudent" name="ParolaStudent" type="password">
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-secondary" data-dismiss="modal" type="button">Close</button>
+                        <input class="btn btn-primary" type="submit" value="Save">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Delete Studenti Modal-->
+<div aria-hidden="true" aria-labelledby="deleteStudentiModalLabel" class="modal fade" id="deleteStudentiModal" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="deleteStudentiModalLabel">Sterge Utilizatori</h5>
+            </div>
+            <div class="table-responsive">
+                <form action="/deleteStudentModal" method="post">
+                    <table class="table">
+                        <tr>
+                            <th scope="col">ID</th>
+                            <th scope="col">Nume</th>
+                            <th scope="col">Prenume</th>
+                            <th scope="col">Email</th>
+                            <th scope="col">Telefon</th>
+                        </tr>
+                        <tr th:each="student : ${studenti}">
+                            <td><input name="checkDeleteStudenti" th:value="${student.getIdstudent()}" type="checkbox"></td>
+                            <td th:text="${student.getNume()}"></td>
+                            <td th:text="${student.getPrenume()}"></td>
+                            <td th:text="${student.getMail()}"></td>
+                            <td th:text="${student.getTelefon()}"></td>
+                        </tr>
+                    </table>
+                    <button class="btn btn-danger" type="submit">Delete</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- View Profesori Modal -->
+<div aria-hidden="true" aria-labelledby="viewProfesoriModalLabel" class="modal fade" id="viewProfesoriModal" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="viewProfesoriModalLabel">Vizualizare Profesori</h5>
+            </div>
+            <div class="table-responsive">
+                <table class="table">
+                    <tr>
+                        <th scope="col">Nume</th>
+                        <th scope="col">Prenume</th>
+                        <th scope="col">Departament</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Telefon</th>
+                    </tr>
+                    <tr th:each="profesor : ${profesori}">
+                        <td th:text="${profesor.getNume()}"></td>
+                        <td th:text="${profesor.getPrenume()}"></td>
+                        <td th:text="${profesor.getDepartament()}"></td>
+                        <td th:text="${profesor.getMail()}"></td>
+                        <td th:text="${profesor.getTelefon()}"></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Add Profesori Modal -->
+<div aria-hidden="true" aria-labelledby="addProfesoriModalLabel" class="modal fade" id="addProfesoriModal" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="addProfesoriModalLabel">Adauga Profesori</h5>
+                <button aria-label="Close" class="close" data-dismiss="modal" type="button">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <!-- Add Student Form -->
+                <form action="/addProfesorModal" id="formularAdaugareProfesor" method="post">
+                    <div class="form-group">
+                        Nume Profesor<input class="form-control" id="numeprofesor" name="NumeProfesor" type="text">
+                    </div>
+                    <div class="form-group">
+                        Prenume Profesor <input class="form-control" id="prenumeprofesor" name="PrenumeProfesor" type="text">
+                    </div>
+                    <div class="form-group">
+                        Departament <input class="form-control" id="departamentprofesor" name="DepartamentProfesor" type="text">
+                    </div>
+                    <div class="form-group">
+                        Adresa Mail <input class="form-control" id="mailprofesor" name="MailProfesor" type="email">
+                    </div>
+                    <div class="form-group">
+                        Telefon <input class="form-control" id="telefonprofesor" name="TelefonProfesor" type="number">
+                    </div>
+                    <div class="form-group">
+                        Parola <input class="form-control" id="parolaprofesor" name="ParolaProfesor" type="password">
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-secondary" data-dismiss="modal" type="button">Close</button>
+                        <input class="btn btn-primary" type="submit" value="Save">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Delete Profesori Modal-->
+<div aria-hidden="true" aria-labelledby="deleteProfesoriModalLabel" class="modal fade" id="deleteProfesoriModal" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="deleteProfesoriModalLabel">Sterge Profesori</h5>
+            </div>
+            <div class="table-responsive">
+                <form action="/deleteProfesorModal" method="post">
+                    <table class="table">
+                        <tr>
+                            <th scope="col">ID</th>
+                            <th scope="col">Nume</th>
+                            <th scope="col">Prenume</th>
+                            <th scope="col">Departament</th>
+                            <th scope="col">Email</th>
+                            <th scope="col">Telefon</th>
+                        </tr>
+                        <tr th:each="profesor : ${profesori}">
+                            <td><input name="checkDeleteProfesori" th:value="${profesor.getIdprofesor()}" type="checkbox"></td>
+                            <td th:text="${profesor.getNume()}"></td>
+                            <td th:text="${profesor.getPrenume()}"></td>
+                            <td th:text="${profesor.getDepartament()}"></td>
+                            <td th:text="${profesor.getMail()}"></td>
+                            <td th:text="${profesor.getTelefon()}"></td>
+                        </tr>
+                    </table>
+                    <button class="btn btn-danger" type="submit">Delete</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- View Rezervari Modal -->
+<div aria-hidden="true" aria-labelledby="viewRezervariModalLabel" class="modal fade" id="viewRezervariModal" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="viewRezervariModalLabel">Vizualizare Rezervari</h5>
+            </div>
+            <div class="table-responsive">
+                <table class="table">
+                    <tr>
+                        <th scope="col">IDSala</th>
+                        <th scope="col">Ora de Inceput</th>
+                        <th scope="col">Ora de Final</th>
+                    </tr>
+                    <tr th:each="rezervare : ${rezervari}">
+                        <td th:text="${rezervare.getIdsala()}"></td>
+                        <td th:text="${rezervare.getStarthour()}"></td>
+                        <td th:text="${rezervare.getEndhour()}"></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Delete Rezervari Modal-->
+<div aria-hidden="true" aria-labelledby="deleteRezervariModalLabel" class="modal fade" id="deleteRezervariModal" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="deleteRezervariModalLabel">Sterge Rezervari</h5>
+            </div>
+            <div class="table-responsive">
+                <form action="/deleteRezervareModal" method="post">
+                    <table class="table">
+                        <tr>
+                            <th scope="col">IDMasa</th>
+                            <th scope="col">Ora de Inceput</th>
+                            <th scope="col">Ora de Final</th>
+                        </tr>
+                        <tr th:each="rezervare : ${rezervari}">
+                            <td><input name="checkDeleteRezervari" th:value="${rezervare.getIdrezervare()}" type="checkbox"></td>
+                            <td th:text="${rezervare.getIdsala()}"></td>
+                            <td th:text="${rezervare.getStarthour()}"></td>
+                            <td th:text="${rezervare.getEndhour()}"></td>
+                        </tr>
+                    </table>
+                    <button class="btn btn-danger" type="submit">Delete</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<input type="hidden" id="updown" th:value="${flagupdown}">
+
+<!-- Bootstrap JS and jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<!-- MDB -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.3.0/mdb.umd.min.js"></script>
+
+
+<script>
+
+    function changeMentenanta(){
+        $.ajax({
+            url:'/checkMentenanta',
+            type:'POST',
+
+            success: function(response) {
+                if(response === "Status Changed") {
+                    alert(response);
+                }
+            },
+            error: function(xhr, status, error) {
+                console.error('Ajax request failed:', error);
+                alert(error);
+            }
+        });
+    }
+
+    function updown(){
+        var flag = document.getElementById('updown').value;
+
+        var slider = document.getElementById('flexSwitchCheckDefault');
+
+        slider.value = flag;
+    }
+
+
+
+
+</script>
+
+</body>
+
+
+</html>

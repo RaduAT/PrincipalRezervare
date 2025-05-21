@@ -1,0 +1,342 @@
+/*--------------------------------------------------------------
+# Generale
+--------------------------------------------------------------*/
+html,
+body,
+header,
+.view {
+    height: 100%;
+    background-color:#93a5cf;
+    background-size: cover;
+}
+
+
+@media (max-width: 740px) {
+    html,
+    body,
+    header,
+    .view {
+        height: 1000px;
+    }
+}
+
+@media (min-width: 800px) and (max-width: 850px) {
+    html,
+    body,
+    header,
+    .view {
+        height: 650px;
+    }
+}
+
+
+
+
+/*--------------------------------------------------------------
+# Navbar
+--------------------------------------------------------------*/
+
+
+#navbar-logo{
+    max-height: 60px;
+    width: auto;
+}
+
+.navbar-brand {
+    letter-spacing: 3px;
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+.navbar-scroll .navbar-brand,
+.navbar-scroll .nav-link,
+.navbar-scroll .fa-bars {
+    color: #fff !important;
+    text-decoration: none;
+}
+
+.navbar-scroll {
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.3);
+    background-color: #1c2331;
+    opacity: 0.85;
+}
+
+
+/*--------------------------------------------------------------
+# Intro
+--------------------------------------------------------------*/
+
+#news_intro {
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Background */
+    background: linear-gradient(-45deg, #0097A7, #0277BD, #3F51B5, #7E57C2);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+#text_intro1,
+#text_intro2{
+    color: white;
+    text-shadow: 6px 6px 6px #000000;
+}
+
+/*--------------------------------------------------------------
+# Poza OverLap
+--------------------------------------------------------------*/
+
+.page-section {
+    margin-top: 5rem;
+    margin-bottom: 3rem;
+    background-color: #93a5cf;
+}
+
+.section-heading .section-heading-lower {
+    display: block;
+    font-size: 2rem;
+    font-weight: 100;
+}
+
+.overlap {
+    position: relative;
+}
+
+.overlap .overlap-img {
+    width: 75%;
+    float: right;
+}
+
+.overlap .overlap-text {
+    left: 0;
+    width: 60%;
+    margin-top: 3rem;
+    position: absolute;
+}
+
+.overlap .overlap-text .overlap-button {
+    width: 100%;
+    left: 0;
+    position: absolute;
+    bottom: -2rem;
+}
+
+@media min-width1200px {
+    .overlap .overlap-text {
+        width: 45%;
+    }
+}
+
+.bg-faded {
+    background-color: rgba(255, 255, 255, .85);
+}
+
+.text-center {
+    text-align: center!important;
+}
+
+.p-5 {
+    padding: 3rem!important;
+}
+
+.rounded {
+    border-radius: .25rem!important;
+}
+
+*,
+::after,
+::before {
+    box-sizing: border-box;
+}
+
+#chenar {
+    -webkit-box-shadow: 10px 10px 183px -1px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px 10px 183px -1px rgba(0, 0, 0, 0.75);
+    box-shadow: 10px 10px 183px -1px rgba(0, 0, 0, 0.75);
+}
+
+#pozachenar {
+    border-radius: 49px 49px 49px 49px;
+    -moz-border-radius: 49px 49px 49px 49px;
+    -webkit-border-radius: 49px 49px 49px 49px;
+    border: 0px solid #000000;
+    -webkit-box-shadow: 10px 10px 68px -9px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px 10px 68px -9px rgba(0, 0, 0, 0.75);
+    box-shadow: 10px 10px 68px -9px rgba(0, 0, 0, 0.75);
+}
+
+
+
+/*--------------------------------------------------------------
+# Poza
+--------------------------------------------------------------*/
+
+.responsive-image {
+    position: relative;
+    width: 100%;
+    height: auto;
+
+    border-radius: 49px 49px 49px 49px;
+    -moz-border-radius: 49px 49px 49px 49px;
+    -webkit-border-radius: 49px 49px 49px 49px;
+    border: 0px solid #000000;
+    -webkit-box-shadow: 10px 10px 68px -9px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px 10px 68px -9px rgba(0, 0, 0, 0.75);
+    box-shadow: 10px 10px 68px -9px rgba(0, 0, 0, 0.75);
+}
+
+/*--------------------------------------------------------------
+# Date Picker
+--------------------------------------------------------------*/
+.form-container {
+    background-color: #f8f9fa;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.form-container h2 {
+    margin-bottom: 20px;
+}
+
+.form-container .form-group {
+    margin-bottom: 15px;
+}
+
+.form-container .btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.form-container .btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #004085;
+}
+
+
+/*--------------------------------------------------------------
+# Formular
+--------------------------------------------------------------*/
+
+.intro {
+    height: 100%;
+}
+
+#continut{
+    width: 50%;
+    margin: auto;
+}
+
+#form-letters{
+    color:#3b5998;
+}
+
+#button-submit {
+    background-color: #93a5cf;
+}
+
+
+
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+
+#footer-social {
+    background-color: #93a5cf;
+}
+
+#social-button-facebook {
+    background-color: #3b5998;
+}
+
+#social-button-youtube {
+    background-color: #ed302f;
+}
+
+#social-button-instagram {
+    background-color: #ac2bac;
+}
+
+#social-button-twitter {
+    background-color: #55acee;
+}
+
+#footer-background {
+    background-color: #1c2331;
+}
+
+#footer-line-under-title-1,
+#footer-line-under-title-2,
+#footer-line-under-title-3,
+#footer-line-under-title-4{
+    width: 60px;
+    background-color: #93a5cf;
+    height: 2px;
+}
+
+#copyright {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+
+#map{
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+iframe {
+    height: 100%;
+    width: 100%;
+    border: none;
+}
+
+/*--------------------------------------------------------------
+# Back to top button
+--------------------------------------------------------------*/
+
+.back-to-top {
+    position: fixed;
+    visibility: hidden;
+    opacity: 0;
+    right: 15px;
+    bottom: 15px;
+    z-index: 996;
+    background: #93a5cf;
+    width: 40px;
+    height: 40px;
+    border-radius: 4px;
+    transition: all 0.4s;
+}
+
+.back-to-top i {
+    font-size: 28px;
+    color: #fff;
+    line-height: 0;
+}
+
+.back-to-top:hover {
+    background: #3f51b5;
+    color: #fff;
+}
+
+.back-to-top.active {
+    visibility: visible;
+    opacity: 1;
+}

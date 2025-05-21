@@ -1,0 +1,257 @@
+/*--------------------------------------------------------------
+# Generale
+--------------------------------------------------------------*/
+
+html,
+body,
+header,
+.view {
+    height: 100%;
+}
+
+html,
+body,
+header,
+.view {
+    height: 100%;
+}
+
+@media (max-width: 740px) {
+    html,
+    body,
+    header,
+    .view {
+        height: auto; /* Adjust height for smaller screens */
+    }
+}
+
+@media (min-width: 800px) and (max-width: 850px) {
+    html,
+    body,
+    header,
+    .view {
+        height: 650px;
+    }
+}
+
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+
+#intro-example{
+    height: 400px;
+    background-image: url('assets/indexMedia/restaurant.jpg');
+}
+
+@media (min-width: 992px) {
+    #intro-example {
+        height: 100vh;
+    }
+}
+
+#intro-photo{
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+/*--------------------------------------------------------------
+# Section
+--------------------------------------------------------------*/
+#text_intro1{
+    color: #00B685;
+    text-shadow: 6px 6px 6px #000000;
+}
+
+#text_intro2{
+    color: #00B685;
+    text-shadow: 3px 3px 3px #000000;
+    font-weight: bold;
+}
+
+
+#sectionCards{
+    background: linear-gradient(#e4efe9, #93a5cf);
+}
+
+.full-height {
+    min-height: 100vh; /* Full viewport height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; /* Center horizontally */
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.card {
+    height: 400px; /* Adjust the height as needed */
+    border-radius: 20px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow */
+    margin-bottom: 20px;
+}
+
+#cardLogin{
+    background: url("assets/indexMedia/login.jpg") #2a5555 no-repeat center center scroll;
+    background-size: cover;
+    opacity: 0.7;
+
+}
+
+#cardRegister{
+    background: url("assets/indexMedia/students.jpg") #2a5555 no-repeat center center scroll;
+    background-size: cover;
+    opacity: 0.7;
+
+}
+
+#cardRegisterProfesor{
+    background: url("assets/indexMedia/profesor.jpg") #2a5555 no-repeat center center scroll;
+    background-size: cover;
+    opacity: 0.7;
+
+}
+
+#textCardLogin{
+    color: #00B685;
+    font-weight: bold;
+    text-shadow: 1px 3px 0 #969696, 1px 13px 5px #aba8a8, 2px 2px 8px rgba(0,0,0,0.93);
+
+
+}
+
+#textCardRegister1,
+#textCardRegister2{
+    color: #00B685;
+    font-weight: bold;
+    text-shadow: 1px 3px 0 #969696, 1px 13px 5px #aba8a8, 2px 2px 8px rgba(0,0,0,0.93);
+
+
+}
+
+#textCardRegisterProfesor1,
+#textCardRegisterProfesor2{
+    color: #00B685;
+    font-weight: bold;
+    text-shadow: 1px 3px 0 #969696, 1px 13px 5px #aba8a8, 2px 2px 8px rgba(0,0,0,0.93);
+}
+
+.card:hover{
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
+}
+
+.card-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Adjust layout for smaller screens */
+@media (max-width: 576px) {
+    .header, .footer {
+        padding: 10px;
+    }
+    .header {
+        text-align: center;
+    }
+    .footer {
+        text-align: center;
+    }
+    #sectionCards {
+        padding: 20px 10px;
+    }
+    .card {
+        margin-bottom: 20px;
+        height: auto; /* Allow card height to adjust */
+    }
+}
+
+
+
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+
+#footer-social {
+    background-color: #93a5cf;
+}
+
+#social-button-facebook {
+    background-color: #3b5998;
+}
+
+#social-button-youtube {
+    background-color: #ed302f;
+}
+
+#social-button-instagram {
+    background-color: #ac2bac;
+}
+
+#social-button-twitter {
+    background-color: #55acee;
+}
+
+#footer-background {
+    background-color: #1c2331;
+}
+
+#footer-line-under-title-1,
+#footer-line-under-title-2,
+#footer-line-under-title-3,
+#footer-line-under-title-4{
+    width: 60px;
+    background-color: #93a5cf;
+    height: 2px;
+}
+
+#copyright {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+
+#map{
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+iframe {
+    height: 100%;
+    width: 100%;
+    border: none;
+}
+
+/*--------------------------------------------------------------
+# Back to top button
+--------------------------------------------------------------*/
+
+.back-to-top {
+    position: fixed;
+    visibility: hidden;
+    opacity: 0;
+    right: 15px;
+    bottom: 15px;
+    z-index: 996;
+    background: #93a5cf;
+    width: 40px;
+    height: 40px;
+    border-radius: 4px;
+    transition: all 0.4s;
+}
+
+.back-to-top i {
+    font-size: 28px;
+    color: #fff;
+    line-height: 0;
+}
+
+.back-to-top:hover {
+    background: #3f51b5;
+    color: #fff;
+}
+
+.back-to-top.active {
+    visibility: visible;
+    opacity: 1;
+}

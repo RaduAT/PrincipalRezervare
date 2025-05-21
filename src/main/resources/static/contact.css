@@ -1,0 +1,182 @@
+/*--------------------------------------------------------------
+# Generale
+--------------------------------------------------------------*/
+
+html,
+body,
+header,
+.view {
+    height: 100%;
+    background: linear-gradient(#e4efe9, #93a5cf);
+}
+
+html,
+body,
+header,
+.view {
+    height: 100%;
+}
+
+@media (max-width: 740px) {
+    html,
+    body,
+    header,
+    .view {
+        height: 1000px;
+    }
+}
+
+@media (min-width: 800px) and (max-width: 850px) {
+    html,
+    body,
+    header,
+    .view {
+        height: 650px;
+    }
+}
+
+
+/*--------------------------------------------------------------
+# Navbar
+--------------------------------------------------------------*/
+
+
+#navbar-logo{
+    max-height: 60px;
+    width: auto;
+}
+
+.navbar-brand {
+    letter-spacing: 3px;
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+.navbar-scroll .navbar-brand,
+.navbar-scroll .nav-link,
+.navbar-scroll .fa-bars {
+    color: #fff !important;
+    text-decoration: none;
+}
+
+.navbar-scroll {
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.3);
+    background-color: #1c2331;
+    opacity: 0.85;
+}
+
+/*--------------------------------------------------------------
+# Formular
+--------------------------------------------------------------*/
+
+.intro {
+    height: 100%;
+}
+
+#continut{
+    width: 50%;
+    margin: auto;
+}
+
+#form-letters{
+    color:#3b5998;
+}
+
+.gradient-custom {
+    background: linear-gradient(#e4efe9, #93a5cf);
+}
+
+#button-submit {
+    background-color: #93a5cf;
+}
+
+
+
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+
+#footer-social {
+    background-color: #93a5cf;
+}
+
+#social-button-facebook {
+    background-color: #3b5998;
+}
+
+#social-button-youtube {
+    background-color: #ed302f;
+}
+
+#social-button-instagram {
+    background-color: #ac2bac;
+}
+
+#social-button-twitter {
+    background-color: #55acee;
+}
+
+#footer-background {
+    background-color: #1c2331;
+}
+
+#footer-line-under-title-1,
+#footer-line-under-title-2,
+#footer-line-under-title-3,
+#footer-line-under-title-4{
+    width: 60px;
+    background-color: #93a5cf;
+    height: 2px;
+}
+
+#copyright {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+
+#map{
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+iframe {
+    height: 100%;
+    width: 100%;
+    border: none;
+}
+
+/*--------------------------------------------------------------
+# Back to top button
+--------------------------------------------------------------*/
+
+.back-to-top {
+    position: fixed;
+    visibility: hidden;
+    opacity: 0;
+    right: 15px;
+    bottom: 15px;
+    z-index: 996;
+    background: #93a5cf;
+    width: 40px;
+    height: 40px;
+    border-radius: 4px;
+    transition: all 0.4s;
+}
+
+.back-to-top i {
+    font-size: 28px;
+    color: #fff;
+    line-height: 0;
+}
+
+.back-to-top:hover {
+    background: #3f51b5;
+    color: #fff;
+}
+
+.back-to-top.active {
+    visibility: visible;
+    opacity: 1;
+}
